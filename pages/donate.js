@@ -8,7 +8,9 @@ export default function Donate() {
       <Head page_title="Donate to Milijan Mosic" />
 
       <Nav />
-      <h1>Donate</h1>
+      <main className="flex justify-center items-center w-full bg-gray-900 text-white">
+        <h1>Donate</h1>
+      </main>
       <Footer />
     </>
   );

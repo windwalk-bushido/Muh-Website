@@ -9,13 +9,19 @@ export default function Nav() {
         </div>
         <div>
           <Link href="/">
-            <a className="mr-1.5 transition duration-150 ease-out hover:underline hover:text-amber-300">Blog</a>
+            <a className="mr-0.5 p-2 rounded-lg shadow-lg transition duration-150 ease-out hover:bg-amber-300 hover:text-black">
+              Blog
+            </a>
           </Link>
           <Link href="/portfolio">
-            <a className="ml-1.5 mr-1.5 transition duration-150 ease-out hover:underline hover:text-amber-300">Portfolio</a>
+            <a className="m-0.5 p-2 rounded-lg shadow-lg transition duration-150 ease-out hover:bg-amber-300 hover:text-black">
+              Portfolio
+            </a>
           </Link>
           <Link href="/donate">
-            <a className="ml-1.5 transition duration-150 ease-out hover:underline hover:text-amber-300">Donate</a>
+            <a className="ml-0.5 p-2 rounded-lg shadow-lg transition duration-150 ease-out hover:bg-amber-300 hover:text-black">
+              Donate
+            </a>
           </Link>
         </div>
       </div>

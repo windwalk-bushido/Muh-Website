@@ -1,2 +1,2 @@
-Make head, nav, footer and post card components
-Remove TailwindCSS via CDN and deliver it within.
+Make post card components
+Add dark/light mode toggle button & functionality
