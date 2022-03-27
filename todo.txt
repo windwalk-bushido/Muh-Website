@@ -1,3 +1,12 @@
-Make post card components
-Add dark/light mode toggle button & functionality
-Add dynamic footer - if current year is not 2022. add -> { 2022. - currentYear. }
+Add short bio on index page + "Articles" title bellow;
+Add custom CSS from previous Blog project (for articles page);
+Add dark/light mode toggle button & functionality;
+Add dynamic footer - if current year is not 2022. add -> { 2022. - currentYear. };
+Increase font size on whole website for 1.25 times;
+Test viewports;
+
+Milestones {
+  Algolia search functionality for searching articles + filter list;
+  Make Portfolio page;
+  Make Donation page;
+}
