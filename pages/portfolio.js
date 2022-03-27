@@ -6,7 +6,6 @@ export default function Portfolio() {
   return (
     <>
       <Head page_title="Milijan Mosić's Portfolio" />
-
       <Nav />
       <main className="flex justify-center items-center w-full bg-gray-900 text-white">
         <h1>Portfolio</h1>
