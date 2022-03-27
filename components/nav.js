@@ -3,9 +3,9 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <nav className="flex justify-center items-center w-full bg-black text-white">
-      <div className="flex justify-between items-center w-full lg:w-6/12 pl-4 pr-4 h-12">
+      <div className="flex justify-between items-center w-full lg:w-8/12 h-20 sm:h-12 pl-4 pr-4">
         <div>
-          <p className="muh_name text-3xl">Milijan Mosić</p>
+          <p className="muh_name text-3xl mr-4">Milijan Mosić</p>
         </div>
         <div>
           <Link href="/">
