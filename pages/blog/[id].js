@@ -8,7 +8,6 @@ export default function Post({ postData }) {
   return (
     <>
       <Head page_title={pageTitle} />
-
       <Nav />
       <main className="flex justify-center items-center w-full bg-gray-900 text-white">
         <article className="flex flex-col justify-center items-center w-full lg:w-8/12 mt-8 mb-16">

@@ -25,10 +25,10 @@ export default function Blog({ allPostsData }) {
             <Link href={`/blog/${id}`}>
               <div
                 key={id}
-                className="group w-full p-4 m-4 rounded-xl shadow-lg transition duration-150 ease-out hover:cursor-pointer bg-gray-800 hover:bg-amber-300 hover:text-black"
+                className="group w-full p-4 m-4 rounded-xl shadow-lg transition duration-150 ease-out hover:cursor-pointer shadow-green-300/20 hover:shadow-green-300/70 bg-gray-800 hover:bg-green-300 hover:text-black"
               >
                 <div>
-                  <h3 className="text-2xl font-bold text-yellow-300 group-hover:text-black">{title}</h3>
+                  <h3 className="text-2xl font-bold text-green-300 group-hover:text-black">{title}</h3>
                   <Date dateString={date} />
                 </div>
                 <div>

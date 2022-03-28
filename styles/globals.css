@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 html {
-  font-size: 24px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
 }
 
 ::selection {
-  background-color: rgb(252 211 77); /* bg-amber-300 */
+  background-color: rgb(134 239 172); /* bg-green-300 */
   color: rgb(0 0 0);
 }
 

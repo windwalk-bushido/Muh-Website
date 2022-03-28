@@ -1,0 +1,155 @@
+h1 {
+  @apply text-5xl;
+}
+
+h2 {
+  @apply text-4xl;
+}
+
+h3 {
+  @apply text-3xl;
+}
+
+h4 {
+  @apply text-2xl;
+}
+
+h5 {
+  @apply text-xl;
+}
+
+h6 {
+  @apply text-lg;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mt-12;
+  @apply mb-12;
+  @apply text-center;
+}
+
+p {
+  @apply mt-6;
+  @apply mb-6;
+  @apply leading-relaxed;
+}
+
+strong {
+  text-decoration: solid underline 2px;
+}
+
+em {
+  font-style: oblique 25deg;
+}
+
+blockquote {
+  @apply p-4;
+  @apply m-4;
+  @apply mt-8;
+  @apply mb-8;
+  @apply rounded-3xl;
+  @apply shadow-xl;
+  @apply border-l-8;
+  @apply border-gray-600;
+  @apply bg-gray-800;
+}
+
+blockquote p {
+  @apply m-0;
+}
+
+blockquote ol,
+blockquote ul {
+  @apply ml-8;
+}
+
+ol,
+ul {
+  @apply list-decimal;
+  @apply ml-4;
+}
+
+ul {
+  @apply list-disc;
+}
+
+ol p,
+ul p {
+  @apply m-0;
+}
+
+pre {
+  @apply p-4;
+  @apply m-4;
+  @apply mt-8;
+  @apply mb-8;
+  @apply rounded-3xl;
+  @apply shadow-xl;
+  @apply bg-gray-700;
+}
+
+pre,
+code,
+kbd {
+  font-family: "Fira Mono", monospace;
+}
+
+code,
+kbd {
+  @apply pt-1;
+  @apply pb-1;
+  @apply rounded-3xl;
+  @apply bg-gray-700;
+}
+
+code {
+  @apply break-all;
+}
+
+hr {
+  @apply mt-8;
+  @apply mb-8;
+}
+
+a {
+  @apply text-amber-300;
+  @apply transition-all;
+  @apply duration-150;
+  @apply ease-out;
+}
+
+a:hover {
+  @apply transition-all;
+  @apply text-white;
+}
+
+@media only screen and (min-device-width: 1280px) {
+  h1 {
+    @apply text-7xl;
+  }
+
+  h2 {
+    @apply text-6xl;
+  }
+
+  h3 {
+    @apply text-5xl;
+  }
+
+  h4 {
+    @apply text-4xl;
+  }
+
+  h5 {
+    @apply text-3xl;
+  }
+
+  h6 {
+    @apply text-2xl;
+  }
+}
