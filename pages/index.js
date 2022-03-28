@@ -1,11 +1,5 @@
-import Head from "../components/head";
-import Nav from "../components/nav";
-import Footer from "../components/footer";
-import Date from "../components/date";
-import Bio from "../components/bio";
-import Link from "next/link";
-
 import { getSortedPostsData } from "../lib/posts";
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
@@ -14,6 +8,13 @@ export async function getStaticProps() {
     },
   };
 }
+
+import Head from "../components/head";
+import Nav from "../components/nav";
+import Footer from "../components/footer";
+import Date from "../components/date";
+import Bio from "../components/bio";
+import Link from "next/link";
 
 export default function Blog({ allPostsData }) {
   return (

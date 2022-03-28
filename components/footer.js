@@ -1,3 +1,12 @@
+export function RenderWebsitesBirthday() {
+  const current_year = new Date().getFullYear();
+  if (current_year != 2022) {
+    return <p className="mb-4 sm:m-4">2022. - {current_year}.</p>;
+  } else {
+    return <p className="mb-4 sm:m-4">2022.</p>;
+  }
+}
+
 export default function Footer() {
   return (
     <footer className="flex justify-center w-full bg-black text-white">
@@ -22,7 +31,7 @@ export default function Footer() {
             Content Licence
           </a>
         </div>
-        <p className="mb-4 sm:m-4">2022.</p>
+        {RenderWebsitesBirthday()}
       </div>
     </footer>
   );

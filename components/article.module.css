@@ -1,5 +1,7 @@
 .article {
   @apply w-full;
+  @apply pr-4;
+  @apply pl-4;
 }
 
 .article h1 {

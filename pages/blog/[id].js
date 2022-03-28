@@ -1,3 +1,22 @@
+export async function getStaticPaths() {
+  const paths = getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+import { getAllPostIds, getPostData } from "../../lib/posts";
+
+export async function getStaticProps({ params }) {
+  const postData = await getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
+
 import Head from "../../components/head";
 import Nav from "../../components/nav";
 import Footer from "../../components/footer";
@@ -22,23 +41,4 @@ export default function Post({ postData }) {
       <Footer />
     </>
   );
-}
-
-export async function getStaticPaths() {
-  const paths = getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-import { getAllPostIds, getPostData } from "../../lib/posts";
-
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
-  return {
-    props: {
-      postData,
-    },
-  };
 }

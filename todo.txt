@@ -1,11 +1,10 @@
-Fix text size hierarchy.
+Make Portfolio page;
+Make Donation page;
 Write better bio and put better picture.
-Add dynamic footer - if current year is not 2022. add -> { 2022. - currentYear. };
-Test viewports;
+Write 5 articles.
+Publish!
 
 Milestones {
   Algolia search functionality for searching articles + filter list;
-  Make Portfolio page;
-  Make Donation page (fetch data from "metadata" file);
   Add RSS button and functionality;
 }
