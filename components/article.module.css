@@ -1,55 +1,62 @@
-h1 {
+.article {
+  @apply w-full;
+}
+
+.article h1 {
   @apply text-5xl;
 }
 
-h2 {
+.article h2 {
   @apply text-4xl;
 }
 
-h3 {
+.article h3 {
   @apply text-3xl;
 }
 
-h4 {
+.article h4 {
   @apply text-2xl;
 }
 
-h5 {
+.article h5 {
   @apply text-xl;
 }
 
-h6 {
+.article h6 {
   @apply text-lg;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.article h1,
+.article h2,
+.article h3,
+.article h4,
+.article h5,
+.article h6 {
   @apply mt-12;
   @apply mb-12;
   @apply text-center;
 }
 
-p {
+.article p {
   @apply mt-6;
   @apply mb-6;
   @apply leading-relaxed;
 }
 
-strong {
-  text-decoration: solid underline 2px;
+.article strong {
+  @apply p-0.5;
+  @apply bg-white;
+  @apply text-black;
+  @apply rounded-xl;
+  @apply opacity-80;
 }
 
-em {
+.article em {
   font-style: oblique 25deg;
 }
 
-blockquote {
+.article blockquote {
   @apply p-4;
-  @apply m-4;
   @apply mt-8;
   @apply mb-8;
   @apply rounded-3xl;
@@ -59,33 +66,32 @@ blockquote {
   @apply bg-gray-800;
 }
 
-blockquote p {
+.article blockquote p {
   @apply m-0;
 }
 
-blockquote ol,
-blockquote ul {
+.article blockquote ol,
+.article blockquote ul {
   @apply ml-8;
 }
 
-ol,
-ul {
+.article ol,
+.article ul {
   @apply list-decimal;
   @apply ml-4;
 }
 
-ul {
+.article ul {
   @apply list-disc;
 }
 
-ol p,
-ul p {
+.article ol p,
+.article ul p {
   @apply m-0;
 }
 
-pre {
+.article pre {
   @apply p-4;
-  @apply m-4;
   @apply mt-8;
   @apply mb-8;
   @apply rounded-3xl;
@@ -93,63 +99,64 @@ pre {
   @apply bg-gray-700;
 }
 
-pre,
-code,
-kbd {
+.article pre,
+.article code,
+.article kbd {
   font-family: "Fira Mono", monospace;
 }
 
-code,
-kbd {
+.article code,
+.article kbd {
   @apply pt-1;
   @apply pb-1;
   @apply rounded-3xl;
   @apply bg-gray-700;
 }
 
-code {
+.article code {
   @apply break-all;
 }
 
-hr {
+.article hr {
   @apply mt-8;
   @apply mb-8;
 }
 
-a {
-  @apply text-amber-300;
+.article a {
+  @apply text-green-300;
+  @apply underline;
   @apply transition-all;
   @apply duration-150;
   @apply ease-out;
 }
 
-a:hover {
+.article a:hover {
   @apply transition-all;
   @apply text-white;
 }
 
 @media only screen and (min-device-width: 1280px) {
-  h1 {
+  .article h1 {
     @apply text-7xl;
   }
 
-  h2 {
+  .article h2 {
     @apply text-6xl;
   }
 
-  h3 {
+  .article h3 {
     @apply text-5xl;
   }
 
-  h4 {
+  .article h4 {
     @apply text-4xl;
   }
 
-  h5 {
+  .article h5 {
     @apply text-3xl;
   }
 
-  h6 {
+  .article h6 {
     @apply text-2xl;
   }
 }
