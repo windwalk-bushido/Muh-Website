@@ -76,12 +76,9 @@ export default function Blog({ allPostsData }) {
       <main className="flex flex-col justify-center items-center w-full bg-gray-900 text-white">
         <h1 className="text-5xl text-center mb-4">Articles</h1>
         <div className="flex flex-col justify-center items-center w-full lg:w-8/12 mt-4 mb-16">
-          {allPostsData.map(({ id, date, title, description }) => (
-            <Link href={`/blog/${id}`}>
-              <div
-                key={id}
-                className="group w-full p-4 m-4 rounded-xl shadow-lg transition duration-150 ease-out hover:cursor-pointer shadow-green-300/20 hover:shadow-green-300/70 bg-gray-800 hover:bg-green-300 hover:text-black"
-              >
+          {allPostsData.map(({ id, title, date, description }) => (
+            <Link href={`/blog/${id}`} key={id}>
+              <div className="group w-full p-4 m-4 rounded-xl shadow-lg transition duration-150 ease-out hover:cursor-pointer shadow-green-300/20 hover:shadow-green-300/70 bg-gray-800 hover:bg-green-300 hover:text-black">
                 <div>
                   <h2 className="text-3xl font-bold text-green-300 group-hover:text-black">{title}</h2>
                   <Date dateString={date} />

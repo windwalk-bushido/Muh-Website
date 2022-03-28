@@ -1,5 +1,6 @@
-Add dynamic footer - if current year is not 2022. add -> { 2022. - currentYear. };
 Fix text size hierarchy.
+Write better bio and put better picture.
+Add dynamic footer - if current year is not 2022. add -> { 2022. - currentYear. };
 Test viewports;
 
 Milestones {
