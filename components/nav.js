@@ -2,24 +2,24 @@ import Link from "next/link";
 
 export default function Nav() {
   return (
-    <nav className="flex justify-center items-center w-full bg-black text-white">
-      <div className="flex justify-between items-center w-full lg:w-8/12 h-20 sm:h-12 pl-4 pr-4 lg:pl-0 lg:pr-0">
-        <div>
-          <p className="muh_name text-3xl mr-4">Milijan Mosić</p>
+    <nav className="flex justify-center items-baseline w-full bg-black text-white">
+      <div className="flex justify-between items-center w-full lg:w-8/12 md:items-baseline ml-4 mr-4 lg:ml-0 lg:mr-0">
+        <div className="flex justify-start w-1/2 sm:w-full">
+          <p className="muh_name text-3xl pt-2 pb-2">Milijan Mosić</p>
         </div>
-        <div>
+        <div className="flex flex-col sm:flex-row justify-end w-24 sm:w-full">
           <Link href="/">
-            <a className="mr-0.5 p-2 rounded-lg shadow-lg transition duration-150 ease-out hover:bg-green-300 hover:text-black">
+            <a className="sm:mr-0.5 p-2 rounded-xl shadow-xl transition duration-150 ease-out hover:bg-green-300 hover:text-black">
               Blog
             </a>
           </Link>
           <Link href="/portfolio">
-            <a className="m-0.5 p-2 rounded-lg shadow-lg transition duration-150 ease-out hover:bg-green-300 hover:text-black">
+            <a className="sm:ml-0.5 sm:mr-0.5 p-2 rounded-xl shadow-xl transition duration-150 ease-out hover:bg-green-300 hover:text-black">
               Portfolio
             </a>
           </Link>
           <Link href="/donate">
-            <a className="ml-0.5 p-2 rounded-lg shadow-lg transition duration-150 ease-out hover:bg-green-300 hover:text-black">
+            <a className="sm:ml-0.5 p-2 rounded-xl shadow-xl transition duration-150 ease-out hover:bg-green-300 hover:text-black">
               Donate
             </a>
           </Link>

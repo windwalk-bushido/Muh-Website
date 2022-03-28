@@ -7,4 +7,5 @@ Milestones {
   Algolia search functionality for searching articles + filter list;
   Make Portfolio page;
   Make Donation page (fetch data from "metadata" file);
+  Add RSS button and functionality;
 }
