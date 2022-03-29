@@ -1,4 +1,5 @@
 [?] Source map for JS;
+Fix footer's padding or height.
 
 Make Portfolio page;
 Make Donation page;
