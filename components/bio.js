@@ -1,7 +1,7 @@
 export default function Bio() {
   return (
     <div className="flex flex-col md:flex-row justify-center lg:justify-between w-full lg:w-8/12 pt-12 pb-16 pl-4 pr-4">
-      <img src="/me.jpg" alt="picture of Milijan Mosić." className="w-full md:w-1/2 lg:w-64 h-fit rounded-xl shadow-xl" />
+      <img src="/me.jpg" alt="picture of Milijan Mosić" className="w-full md:w-1/2 lg:w-64 h-fit rounded-xl shadow-xl" />
       <div className="w-full md:w-1/2 lg:w-fit mt-8 md:mt-0 md:ml-4 lg:ml-8">
         <p>
           Hello there, web developer here. Minimalist. Linux/BSD advocate. Cat lover. Currently unemployed and the student of
