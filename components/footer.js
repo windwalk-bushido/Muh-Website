@@ -10,7 +10,7 @@ export function RenderWebsitesBirthday() {
 export default function Footer() {
   return (
     <footer className="flex justify-center w-full bg-black">
-      <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center w-full lg:w-8/12">
+      <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center w-full lg:w-9/12">
         <div className="m-4">
           <a
             href="#"

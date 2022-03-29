@@ -1,7 +1,7 @@
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getAllProjectIds, getProjectData } from "../../lib/projects";
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds();
+  const paths = getAllProjectIds();
   return {
     paths,
     fallback: false,
@@ -9,10 +9,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  const projectData = await getProjectData(params.id);
   return {
     props: {
-      postData,
+      projectData,
     },
   };
 }
@@ -23,8 +23,8 @@ import Footer from "../../components/footer";
 import Date from "../../components/date";
 import Content from "../../components/article";
 
-export default function Post({ postData }) {
-  const pageTitle = postData.title + " - by Milijan Mosić";
+export default function Post({ projectData }) {
+  const pageTitle = projectData.title + " - by Milijan Mosić";
   return (
     <>
       <Head page_title={pageTitle} />
@@ -32,10 +32,10 @@ export default function Post({ postData }) {
       <main className="flex justify-center items-center w-full">
         <article className="flex flex-col justify-center items-center w-full lg:w-9/12 mt-8 mb-16">
           <div className="mb-16 text-center">
-            <h1 className="mb-4 text-5xl font-bold">{postData.title}</h1>
-            <Date dateString={postData.date} />
+            <h1 className="mb-4 text-5xl font-bold">{projectData.title}</h1>
+            <Date dateString={projectData.date} />
           </div>
-          <Content article_content={postData.contentHtml} />
+          <Content article_content={projectData.contentHtml} />
         </article>
       </main>
       <Footer />

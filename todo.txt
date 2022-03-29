@@ -1,13 +1,13 @@
 [?] Source map for JS;
-Fix footer's padding or height.
-
-Make Portfolio page;
-Make Donation page;
-Write 5 articles.
-Publish!
+Fix footer's padding/height;
+Rearange TailwindCSS classes;
+DRY -> React classes... there's place for improvement, I just know it;
 
 Milestones {
+  Write 6 articles and projects;
+  Publish 4 real!
   Algolia search functionality for searching articles + filter list;
   Add RSS button and functionality;
   Make it PWA;
+  100 score on Google Lighthouse!
 }

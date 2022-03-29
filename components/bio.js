@@ -1,6 +1,6 @@
 export default function Bio() {
   return (
-    <div className="flex flex-col md:flex-row justify-center lg:justify-between w-full lg:w-8/12 pt-12 pb-16 pl-4 pr-4">
+    <div className="flex flex-col md:flex-row justify-center lg:justify-between w-full lg:w-9/12 pt-12 pb-16 pl-4 pr-4">
       <img
         src="/me.webp"
         alt="picture of Milijan Mosić"

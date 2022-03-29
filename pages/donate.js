@@ -77,43 +77,43 @@ function RenderIcon(icon_type) {
   switch (icon_type) {
     case "bitcoin":
       return (
-        <p class="text-8xl">
+        <p className="text-8xl">
           <FontAwesomeIcon icon={faBitcoin} />
         </p>
       );
     case "zcash":
       return (
-        <p class="text-8xl">
+        <p className="text-8xl">
           <FontAwesomeIcon icon={faMoneyBillWave} />
         </p>
       );
     case "ethereum":
       return (
-        <p class="text-8xl">
+        <p className="text-8xl">
           <FontAwesomeIcon icon={faEthereum} />
         </p>
       );
     case "dash":
       return (
-        <p class="text-8xl">
+        <p className="text-8xl">
           <FontAwesomeIcon icon={faDyalog} />
         </p>
       );
     case "monero":
       return (
-        <p class="text-8xl">
+        <p className="text-8xl">
           <FontAwesomeIcon icon={faMonero} />
         </p>
       );
     case "chainlink":
       return (
-        <p class="text-8xl">
+        <p className="text-8xl">
           <FontAwesomeIcon icon={faDiceD20} />
         </p>
       );
     default:
       return (
-        <p class="text-8xl">
+        <p className="text-8xl">
           <FontAwesomeIcon icon={faDonate} />
         </p>
       );
@@ -134,19 +134,22 @@ export default function Donate() {
       <Nav />
       <main className="flex flex-col justify-center items-center w-full">
         <h1 className="pt-12 mb-4 text-center text-5xl">Crypto wallets</h1>
-        <div className="flex flex-wrap flex-col md:flex-row justify-around w-full lg:w-8/12 mt-4 mb-20 pr-8 md:pr-0">
-          {wallet_addresses_list.map((element) => (
-            <div class="w-full m-4 mt-8 mb-8 bg-gray-800 rounded-2xl shadow-lg md:w-80 lg:w-64 xl:w-80 transition duration-150 ease-out shadow-green-300/20 hover:shadow-green-300/70">
-              <div class="flex justify-center items-center w-full h-48 rounded-tl-2xl rounded-tr-2xl bg-gradient-to-b from-green-300 to-gray-800 text-black">
+        <div className="flex flex-wrap flex-col md:flex-row justify-around w-full lg:w-9/12 mt-4 mb-20 pr-8 md:pr-0">
+          {wallet_addresses_list.map((element, id) => (
+            <div
+              className="w-full m-4 mt-8 mb-8 bg-gray-800 rounded-2xl shadow-lg md:w-64 lg:w-80 transition duration-150 ease-out shadow-green-300/20 hover:shadow-green-300/70"
+              key={id}
+            >
+              <div className="flex justify-center items-center w-full h-48 rounded-tl-2xl rounded-tr-2xl bg-gradient-to-b from-green-300 to-gray-800">
                 {RenderIcon(element.coin_type)}
               </div>
-              <div class="flex flex-column flex-wrap justify-center p-4">
-                <h5 class="text-3xl font-bold mb-4">{element.coin_name}</h5>
-                <p class="p-4 rounded-2xl text-xl font-mono break-all bg-gray-700" id={element.wallet_address_field_id}>
+              <div className="flex flex-column flex-wrap justify-center p-4">
+                <h5 className="text-3xl font-bold mb-4">{element.coin_name}</h5>
+                <p className="p-4 rounded-2xl text-xl font-mono break-all bg-gray-700" id={element.wallet_address_field_id}>
                   {element.wallet_address}
                 </p>
                 <button
-                  class="flex justify-center items-center w-16 h-16 p-4 pt-2 pb-2 mt-4 shadow-lg rounded-full text-2xl bg-green-300 transition duration-150 ease-out hover:cursor-pointer hover:bg-black text-black hover:text-green-300"
+                  className="flex justify-center items-center w-16 h-16 p-4 pt-2 pb-2 mt-4 shadow-lg rounded-full text-2xl bg-green-300 transition duration-150 ease-out hover:cursor-pointer hover:bg-black text-black hover:text-green-300 hover:shadow-green-300"
                   onClick={() => {
                     navigator.clipboard.writeText(element.wallet_address);
                   }}
