@@ -2,7 +2,7 @@
 
 
 # LANGUAGES AND FRAMEWORKS
-  Next, JavaScript, HTML5, TailwindCSS, CSS3.
+  NextJS, JavaScript, HTML5, TailwindCSS, CSS3.
 
 # TOOLS AND SOFTWARES
   VS Code, Firefox, Chromium, Linux, Alacritty.

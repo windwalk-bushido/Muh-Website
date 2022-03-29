@@ -1,9 +1,7 @@
-Convert profile picture in .webp format;
 [?] Source map for JS;
 
 Make Portfolio page;
 Make Donation page;
-Write better bio and put better picture.
 Write 5 articles.
 Publish!
 

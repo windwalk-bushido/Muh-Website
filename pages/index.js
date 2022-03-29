@@ -24,11 +24,11 @@ export default function Blog({ allPostsData }) {
       <Nav />
       <main className="flex flex-col justify-center items-center w-full">
         <Bio />
-        <h1 className="text-5xl text-center mt-4 mb-4">Articles</h1>
-        <div className="flex flex-wrap flex-col md:flex-row justify-around w-full lg:w-8/12 mt-4 mb-20 pr-8">
+        <h1 className="mt-4 mb-4 text-center text-5xl">Articles</h1>
+        <div className="flex flex-wrap flex-col md:flex-row justify-around w-full lg:w-8/12 mt-4 mb-20 pr-8 md:pr-0">
           {allPostsData.map(({ id, thumbnail, title, date, description }) => (
             <Link href={`/blog/${id}`} key={id}>
-              <div className="flex flex-col group w-full md:w-5/12 m-4 rounded-xl shadow-xl transition duration-150 ease-out hover:cursor-pointer shadow-green-300/20 hover:shadow-green-300/70 bg-gray-800 hover:bg-green-300 hover:text-black">
+              <div className="flex flex-col group w-full md:w-5/12 m-4 mt-8 mb-8 rounded-xl shadow-xl transition duration-150 ease-out hover:cursor-pointer shadow-green-300/20 hover:shadow-green-300/70 bg-gray-800 hover:bg-green-300 hover:text-black">
                 <div className="w-full">
                   <Image
                     src={thumbnail}

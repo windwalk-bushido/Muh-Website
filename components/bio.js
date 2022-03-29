@@ -51,7 +51,7 @@ export default function Bio() {
           >
             milijan-mosic@protonmail.com
           </a>{" "}
-          email.
+          email. Thanks!
         </p>
       </div>
     </div>
