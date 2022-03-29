@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta charSet="UTF-8" />
         <meta name="description" content="Just an ordinary blog about IT, life and all in between." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
