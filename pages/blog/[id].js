@@ -29,7 +29,7 @@ export default function Post({ postData }) {
     <>
       <Head page_title={pageTitle} />
       <Nav />
-      <main className="flex justify-center items-center w-full bg-gray-900 text-white">
+      <main className="flex justify-center items-center w-full">
         <article className="flex flex-col justify-center items-center w-full lg:w-8/12 mt-8 mb-16">
           <div className="mb-16 text-center">
             <h1 className="text-5xl font-bold mb-4">{postData.title}</h1>

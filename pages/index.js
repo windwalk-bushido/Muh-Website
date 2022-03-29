@@ -22,7 +22,7 @@ export default function Blog({ allPostsData }) {
     <>
       <Head page_title="Milijan Mosić's Blog" />
       <Nav />
-      <main className="flex flex-col justify-center items-center w-full bg-gray-900 text-white">
+      <main className="flex flex-col justify-center items-center w-full">
         <Bio />
         <h1 className="text-5xl text-center mt-4 mb-4">Articles</h1>
         <div className="flex flex-wrap flex-col md:flex-row justify-around w-full lg:w-8/12 mt-4 mb-20 pr-8">

@@ -1,3 +1,6 @@
+Convert profile picture in .webp format;
+[?] Source map for JS;
+
 Make Portfolio page;
 Make Donation page;
 Write better bio and put better picture.
@@ -7,4 +10,5 @@ Publish!
 Milestones {
   Algolia search functionality for searching articles + filter list;
   Add RSS button and functionality;
+  Make it PWA;
 }
