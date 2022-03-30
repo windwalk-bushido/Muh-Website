@@ -73,54 +73,42 @@ const wallet_addresses_list = [
   },
 ];
 
-function RenderIcon(icon_type) {
+function RenderIcon(icon) {
+  return (
+    <p className="text-8xl">
+      <FontAwesomeIcon icon={icon} />
+    </p>
+  );
+}
+
+function InjectIcon(icon_type) {
   switch (icon_type) {
     case "bitcoin":
-      return (
-        <p className="text-8xl">
-          <FontAwesomeIcon icon={faBitcoin} />
-        </p>
-      );
+      return RenderIcon(faBitcoin);
     case "zcash":
-      return (
-        <p className="text-8xl">
-          <FontAwesomeIcon icon={faMoneyBillWave} />
-        </p>
-      );
+      return RenderIcon(faMoneyBillWave);
     case "ethereum":
-      return (
-        <p className="text-8xl">
-          <FontAwesomeIcon icon={faEthereum} />
-        </p>
-      );
+      return RenderIcon(faEthereum);
     case "dash":
-      return (
-        <p className="text-8xl">
-          <FontAwesomeIcon icon={faDyalog} />
-        </p>
-      );
+      return RenderIcon(faDyalog);
     case "monero":
-      return (
-        <p className="text-8xl">
-          <FontAwesomeIcon icon={faMonero} />
-        </p>
-      );
+      return RenderIcon(faMonero);
     case "chainlink":
-      return (
-        <p className="text-8xl">
-          <FontAwesomeIcon icon={faDiceD20} />
-        </p>
-      );
+      return RenderIcon(faDiceD20);
     default:
-      return (
-        <p className="text-8xl">
-          <FontAwesomeIcon icon={faDonate} />
-        </p>
-      );
+      return RenderIcon(faDonate);
   }
 }
 
-import Head from "../components/head";
+function TriggerToast() {
+  let toast = document.getElementById("toast");
+  toast.classList.remove("hidden");
+  setTimeout(function () {
+    toast.classList.add("hidden");
+  }, 5000);
+}
+
+import Title from "../components/page_title";
 import Nav from "../components/nav";
 import Footer from "../components/footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -130,28 +118,29 @@ import { faMoneyBillWave, faDiceD20, faDonate, faCopy } from "@fortawesome/free-
 export default function Donate() {
   return (
     <>
-      <Head page_title="Donate to Milijan Mosić" />
+      <Title page_title="Donate to Milijan Mosić" />
       <Nav />
       <main className="flex flex-col justify-center items-center w-full">
         <h1 className="pt-12 mb-4 text-center text-5xl">Crypto wallets</h1>
-        <div className="flex flex-wrap flex-col md:flex-row justify-around w-full lg:w-9/12 mt-4 mb-20 pr-8 md:pr-0">
+        <div className="flex flex-wrap flex-col md:flex-row justify-around w-full lg:w-9/12 pr-8 md:pr-0 mt-4 mb-20">
           {wallet_addresses_list.map((element, id) => (
             <div
-              className="w-full m-4 mt-8 mb-8 bg-gray-800 rounded-2xl shadow-lg md:w-64 lg:w-80 transition duration-150 ease-out shadow-green-300/20 hover:shadow-green-300/70"
+              className="w-full md:w-64 lg:w-80 m-4 mt-8 mb-8 rounded-xl shadow-xl transition duration-150 ease-out shadow-green-300/20 hover:shadow-green-300/70 bg-gray-800"
               key={id}
             >
-              <div className="flex justify-center items-center w-full h-48 rounded-tl-2xl rounded-tr-2xl bg-gradient-to-b from-green-300 to-gray-800">
-                {RenderIcon(element.coin_type)}
+              <div className="flex justify-center items-center w-full h-48 rounded-tl-xl rounded-tr-xl opacity-90 bg-gradient-to-b from-gray-800 via-black to-gray-800 text-green-300">
+                {InjectIcon(element.coin_type)}
               </div>
               <div className="flex flex-column flex-wrap justify-center p-4">
-                <h5 className="text-3xl font-bold mb-4">{element.coin_name}</h5>
-                <p className="p-4 rounded-2xl text-xl font-mono break-all bg-gray-700" id={element.wallet_address_field_id}>
+                <h5 className="mb-4 text-3xl font-bold">{element.coin_name}</h5>
+                <p className="p-4 rounded-xl text-lg font-mono break-all bg-gray-700" id={element.wallet_address_field_id}>
                   {element.wallet_address}
                 </p>
                 <button
-                  className="flex justify-center items-center w-16 h-16 p-4 pt-2 pb-2 mt-4 shadow-lg rounded-full text-2xl bg-green-300 transition duration-150 ease-out hover:cursor-pointer hover:bg-black text-black hover:text-green-300 hover:shadow-green-300"
+                  className="flex justify-center items-center w-12 h-12 p-4 pt-2 pb-2 mt-4 shadow-xl rounded-full text-xl transition duration-150 ease-out hover:cursor-pointer bg-green-300 hover:bg-black text-black hover:text-green-300 hover:shadow-md hover:shadow-green-300"
                   onClick={() => {
                     navigator.clipboard.writeText(element.wallet_address);
+                    TriggerToast();
                   }}
                 >
                   <FontAwesomeIcon icon={faCopy} />
@@ -159,6 +148,12 @@ export default function Donate() {
               </div>
             </div>
           ))}
+        </div>
+        <div
+          id="toast"
+          className="animate-pulse w-64 m-8 p-4 ring-1 hidden fixed bottom-0 text-center font-bold rounded-xl shadow-xl shadow-green-300/30 ring-green-300 bg-black text-green-300"
+        >
+          Wallet address copied!
         </div>
       </main>
       <Footer />
